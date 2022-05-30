@@ -27,8 +27,8 @@ let transporter = nodemailer.createTransport({
   },
 });
 
-app.get("/", (req, res, next) => {
-  res.json("Hello");
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
 });
 
 app.post("/mail", (req, res, next) => {
