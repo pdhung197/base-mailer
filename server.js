@@ -1,5 +1,5 @@
 require("dotenv").config({ path: __dirname + "/.env" });
-
+const cors = require("cors");
 // console.log(creds)
 
 let express = require("express");
@@ -11,6 +11,11 @@ const path = require("path");
 const router = express.Router();
 
 // Static folder
+app.use(
+  cors({
+    origin: ["*localhost:3003*", "*viethealthydn.com*", "*thaidoc.online*"],
+  })
+);
 app.use("/public", express.static(path.join(__dirname, "public")));
 
 app.use(bodyParser.json());
