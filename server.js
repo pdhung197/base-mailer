@@ -18,6 +18,8 @@ app.use(
       "*viethealthydn.com*",
       "*thaidoc.online*",
       "*76.76.21.9:443*",
+      "https://www.thaidoc.online",
+      "*www.thaidoc.online*",
     ],
   })
 );
