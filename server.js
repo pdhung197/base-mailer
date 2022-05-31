@@ -13,7 +13,12 @@ const router = express.Router();
 // Static folder
 app.use(
   cors({
-    origin: ["*localhost:3003*", "*viethealthydn.com*", "*thaidoc.online*"],
+    origin: [
+      "*localhost:3003*",
+      "*viethealthydn.com*",
+      "*thaidoc.online*",
+      "*76.76.21.9:443*",
+    ],
   })
 );
 app.use("/public", express.static(path.join(__dirname, "public")));
