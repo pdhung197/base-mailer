@@ -11,25 +11,6 @@ const path = require("path");
 const router = express.Router();
 
 // Static folder
-const whitelist = [
-  "*localhost:3003*",
-  "*viethealthydn.com*",
-  "*thaidoc.online*",
-  "*76.76.21.9*",
-  "https://www.thaidoc.online",
-  "https://www.viethealthydn.com",
-  "*www.viethealthydn.com*",
-  "*www.thaidoc.online*",
-];
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
 app.use(cors());
 app.use("/public", express.static(path.join(__dirname, "public")));
 
