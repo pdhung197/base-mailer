@@ -30,7 +30,7 @@ const corsOptions = {
     }
   },
 };
-app.use(cors(corsOptions));
+app.use(cors());
 app.use("/public", express.static(path.join(__dirname, "public")));
 
 app.use(bodyParser.json());
